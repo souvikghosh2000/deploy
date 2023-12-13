@@ -41,7 +41,7 @@ def main():
     marital = st.selectbox("Job of the customer",marital_option)
     education = st.selectbox("Education",education_option)
     annual_income = st.text_input("Annual Income ")
-    gender = st.selectbox("Housing Loan:  Male-1 Female-0", binary)
+    gender = st.elect_slider("Housing Loan:  Male-1 Female-0", [0.1])
 
 
 
