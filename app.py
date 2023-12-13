@@ -20,7 +20,13 @@ def main():
     st.title('Term Deposit Prediction')
     job_options = [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
     binary = [0,1]
-    contact_option = [0,1,2,3,4]
+    contact_options = {
+    0: 'cellular-0',
+    1: 'Mobile-1',
+    2: 'Tel-2',
+    3: 'telephone-3',
+    4: 'unknown-4'
+}
     marital_option = [0,1,2,3]
     education_option = [0,1,2,3,4,5,6]
 
@@ -30,9 +36,9 @@ def main():
     balance = st.text_input("Enter the balance")
     housing = st.select_slider("Housing Loan:  No-0 Yes-1", [0,1])
     loan = st.selectbox("Loan:  No-0 Yes-1",binary)
-    contact = st.selectbox("Contact Type: unknown-4', 'cellular-0', 'telephone-3', 'Mobile-1', 'Tel-2",contact_option)
+    contact = st.selectbox("Contact Type",list(contact_options.keys()))
     duration = st.text_input("Duration")
-    campaign = st.text_input("Number of contacts performed")
+    campaign = st.text_input("Number of contacts performed during this campaign and for this client ")
     previous = st.text_input("Number of contacts performed before this campaign and for this client ")
     poutcome = st.text_input("Outcome of the previous marketing campaign ")
     count_txn = st.text_input("Number of Transactions Done by the customer ")
